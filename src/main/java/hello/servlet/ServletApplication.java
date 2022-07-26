@@ -2,10 +2,12 @@ package hello.servlet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
+@ServletComponentScan
 @SpringBootApplication
 public class ServletApplication {
-// 테스트
+
 	public static void main(String[] args) {
 		SpringApplication.run(ServletApplication.class, args);
 	}
