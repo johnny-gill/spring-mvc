@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ import java.util.Map;
 public class FrontControllerServletV5 extends HttpServlet {
 
     private final Map<String, Object> handlerMappingMap = new HashMap<>();
-    private final List<MyHandlerAdapter> handlerAdapters = new HashMap<>();
+    private final List<MyHandlerAdapter> handlerAdapters = new ArrayList<>();
 
     public FrontControllerServletV5() {
         initHandlerMappingMap();
@@ -57,7 +58,7 @@ public class FrontControllerServletV5 extends HttpServlet {
         String viewName = mv.getViewName();
         //MyView view = viewResolver(viewName);
 
-        view.render(mv.getModel(), request, response);
+        //view.render(mv.getModel(), request, response);
     }
 
     private MyHandlerAdapter getHandlerAdapter(Object handler) {
